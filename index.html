@@ -1,8 +1,44 @@
-<html>
-  <head>
-    <title>fr</title>
-  </head>
-  <body>
-    <p>test</p>
-  </body>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="min-zoom=250%" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./index.css" />
+        <title>Sxmmer Site</title>
+    </head>
+    <body>
+        <nav class="top-bar-navigation">
+            <div class="navigation-item">
+                <p data-url="https://discord.gg/8RVafRMKSq" class="navigation-item-button">Discord Server</p>
+            </div> 
+            <div class="navigation-item">
+                <p data-url="https://vercel.com" class="navigation-item-button">Vercel</p>
+            </div>
+        </nav>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <p>ADDING MORE SOON!</p>
+
+        <script>
+            const buttons = document.getElementsByClassName("navigation-item-button");
+
+            for (let i = 0; i < buttons.length; i++) {
+                buttons[i].addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const x = document.createElement("a");
+                    x.href = e.target.dataset.url;
+                    x.target = "_blank";
+                    document.body.appendChild(x);
+                    x.click();
+                });
+            }
+        </script>
+    </body>
 </html>
